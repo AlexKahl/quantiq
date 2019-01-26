@@ -19,4 +19,4 @@
               development  and will be extended tremendously.
 """
 
-from rahka.settings import *
+from rahka.settings import config
