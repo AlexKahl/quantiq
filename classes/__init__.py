@@ -19,4 +19,7 @@
               development  and will be extended tremendously.
 """
 
-from rahka.classes import *
+from raphka.classes.alphavantage import AlphaVantage
+from raphka.classes.equitystatic import EquityStatic
+from raphka.classes.connection import Connection
+from raphka.classes.equity import Equity

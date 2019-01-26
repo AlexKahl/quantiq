@@ -17,8 +17,26 @@
 @comment: we still need to add a file logger to config 
 """
 
-alphavantage_settings = {'api-key' : "BP1UK2Z1G6M6B3W9"}
+import logging
+import logging.config
+import pdb
+import numpy as np
+from datetime import datetime
+import pandas as pd
+import requests
 
+alphavantage_settings = {'api-key' : "BP1UK2Z1G6M6B3W9",
+                         'url': "https://www.alphavantage.co/query",
+                         'eodfields':["Open","High","Low","Close",
+                                      "AdjustedClose", "Volume",
+                                      "DividendAmount",
+                                      "SplitCoefficient"],
+                         'intradayfields':["Open","High","Low",
+                                           "Close","Volume"],                                      
+                         'eodfunction':"TIME_SERIES_DAILY_ADJUSTED",
+                         'intradayfunction':"TIME_SERIES_INTRADAY"}
+
+eq_static_file = {'path':"Z:/raphka/data/stocklist.xlsx"}
 
 logging.config.dictConfig({
     'version': 1,
@@ -53,7 +71,7 @@ logging.config.dictConfig({
             'level':'INFO',
             'class':'logging.StreamHandler',
             'formatter': 'simple'
-        }
+        },
             
         'backtest_file': {
             'level':'INFO',

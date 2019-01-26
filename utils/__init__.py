@@ -19,4 +19,4 @@
               development  and will be extended tremendously.
 """
 
-from rahka.utils import *
+from raphka.utils import *

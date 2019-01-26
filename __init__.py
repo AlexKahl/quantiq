@@ -21,4 +21,4 @@
 
 __all__ =["classes","settings","utils"]
 
-from rahka import *
+from raphka import *
